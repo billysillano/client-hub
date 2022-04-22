@@ -1,32 +1,67 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <app-header>Header</app-header>
     <router-view/>
   </div>
 </template>
+<script>
+import AppHeader from '@/components/AppHeader'
 
+export default {
+  components: {
+    AppHeader
+  }  
+}
+</script>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  &:not([class*="vd-margin-"]) {
+    margin: 0;
+  }
+
+  &:not([class*="vd-padding-"]) {
+    padding: 0;
+  }
 }
 
-#nav {
-  padding: 30px;
+body {
+  font-family: "Lato", sans-serif;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.container {
+  margin: 0 auto;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.grid {
+  &__item {
+    padding: 30px 0;
   }
+}
+
+@media (min-width: 768px) {
+  
+.container {
+  max-width: 1024px;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 -30px;
+  
+  &__item {
+    flex: 1 1 auto;
+    padding: 0 30px;
+  }
+
+  &__item--4 {
+		max-width: 33%;
+  }
+}
+  
 }
 </style>
