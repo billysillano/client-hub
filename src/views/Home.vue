@@ -1,26 +1,26 @@
 <template>
   <div class="home">
     <div class="container vd-margin-bottom-20 vd-padding-30">
-      <h2 class="vd-h3 vd-light-blue vd-margin-bottom-10">
+      <h2 class="vd-h3 vd-light-blue vd-margin-bottom-10 vd-margin-top-0">
         Latest Projects
       </h2>
       <div class="grid">
         <div
           v-for="(project, index) in projects"
           :key="index"
-          class="grid__item grid__item--4 vd-margin-bottom-60">
+          class="grid__item grid__item--4 vd-margin-top-20 vd-margin-bottom-20">
           <app-video-card
            :title="project.title"
            :thumbnail="project.thumbnail"
            :producer="project.producer"
            :produced-date="project.date"
-           @view="$router.push({name: 'View'})">
+           @view="$router.push({name: 'View Video'})">
           </app-video-card>
         </div>
       </div>
     </div>
     
-    <div class="container vd-margin-bottom-20 vd-padding-30">
+    <div class="container vd-padding-bottom-20 vd-padding-30">
       <app-table
         title="Your Tasks"
         :fields="fields"

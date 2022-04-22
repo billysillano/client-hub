@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <app-header>Header</app-header>
-    <router-view/>
+    <app-header class="vd-margin-bottom-40">
+      {{ $route.name }}
+    </app-header>
+    <router-view />
   </div>
 </template>
 <script>
@@ -43,25 +45,31 @@ body {
 
 @media (min-width: 768px) {
   
-.container {
-  max-width: 1024px;
-}
-
-.grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0 -30px;
-  
-  &__item {
-    flex: 1 1 auto;
-    padding: 0 30px;
+  .container {
+    max-width: 1024px;
   }
 
-  &__item--4 {
-		max-width: 33%;
+  .grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+
+    &__item {
+      padding: 0 30px;
+    }
+
+    &__item--4 {
+      flex: 1 1 33%;
+      max-width: 33%;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      flex: 1 1 auto;
+    }
   }
-}
   
 }
 </style>

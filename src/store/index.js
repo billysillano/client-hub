@@ -25,7 +25,6 @@ export default new Vuex.Store({
       try {
         const {data} = await axios.get(`http://localhost:3000/tasks`)
         commit(SET_TASKS, data)
-        console.log(data)
       } catch(e) {
         console.error(e)
       }
@@ -61,7 +60,6 @@ export default new Vuex.Store({
       try {
         const {data} = await axios.get(`http://localhost:3000/projects`)
         commit(SET_PROJECTS, data)
-        console.log(data)
       } catch(e) {
         console.error(e)
       }
