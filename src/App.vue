@@ -43,6 +43,10 @@ body {
   }
 }
 
+.text-nowrap {
+  white-space: nowrap;
+}
+
 @media (min-width: 768px) {
   
   .container {

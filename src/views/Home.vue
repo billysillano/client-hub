@@ -33,7 +33,7 @@
         <template #status="{item}">
           <small
             :class="statusClassMap[item.status]"
-            class="vd-padding-extra-small vd-padding-left-20 vd-padding-right-20 vd-text-strong vd-border-radius-25">
+            class="vd-padding-extra-small vd-padding-left-20 vd-padding-right-20 vd-text-strong vd-border-radius-25 text-nowrap">
             {{ item.status }}
           </small>
         </template>
