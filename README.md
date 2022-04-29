@@ -13,7 +13,7 @@ npm i --save axios
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve-dev
+npm run serve-db
 npm run serve
 ```
 
